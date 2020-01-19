@@ -1,0 +1,10 @@
+<br>
+<% @quotes.each do |quote| %>
+    <div class="jumbotron">
+        <p class="mb-0 display-4"><%= quote.body %></p>
+        <footer class="blockquote-footer"><cite title="Source Title"><%= quote.authorName %></cite></footer>
+        <p class="small"><%= quote.updated_at %></p>
+        <br>
+        <%=link_to "More", quote_path(quote), :class => "btn btn-info" %>
+    </div>
+<% end %>
